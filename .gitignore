@@ -20,3 +20,5 @@
 
 Products_app/secretkeyfile.py
 .ebextensions/django_aws_eb.config
+secretkeyfile.py
+*.pyc
