@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'js/simplemde.min.js' %}"></script>
+<script>
+  var simplemde = new SimpleMDE();
+</script>
+{% endblock %}
+
+{% block content %}
+
+<h3>Edit Product</h3>
+<form method="post" novalidate>
+    {% csrf_token %}
+  
+    {% include 'includes/form.html' %}
+  
+    <button type="submit" class="btn btn-success">Update</button>
+  </form><br>
+{% endblock %}

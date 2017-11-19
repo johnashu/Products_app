@@ -1,0 +1,103 @@
+* {list-style-type: none; text-decoration: none}
+body {width:1060px; margin: 0 auto; 
+    background-image: url('https://images.freecreatives.com/wp-content/uploads/2015/03/694608__wallpapers-background-vintage-brown-old-wallpaper-desktop-texture-tekstura-original-vintazh-korichnevyj-staryj-gdefon_p.jpg');
+background-attachment: fixed; max-width:94%; margin-top: 2%
+}
+img {width: 100%; height: auto}
+
+.wrapper {background: #f4f4f4;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+ul {margin: 0; }
+
+footer {background: #c1c1c1; text-align: center; padding-top: 2%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.pagination {background: #f4f4f4; padding: 2% 0% 2% 5%; 
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(1,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(1,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); border-radius: 0px;}
+
+.contain {margin: 2%; height:auto; min-height: 500px}
+
+.container {border-radius:10px; -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);}
+
+nav {
+    background-color: #fff;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);}
+
+    .display_list {display: flex; flex-direction: column; }
+    .display_list_li {display: flex; flex-direction: row; align-items: center;}
+
+   
+
+    .display_list_li a { margin: 2%}
+    .display_list_li p { margin: 2%}
+
+    table.products_table {
+        border: 1px solid #1C6EA4;
+        background-color: #EEEEEE;
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+      }
+      table.products_table td, table.products_table th {
+        border: 1px solid #AAAAAA;
+        padding: 3px 2px;
+      }
+      table.products_table tbody td {
+        font-size: 16px;
+      }
+      table.products_table tr:nth-child(even) {
+        background: #D0E4F5;
+      }
+      table.products_table thead {
+        background: #1C6EA4;
+        background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+        background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+        background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+        border-bottom: 2px solid #444444;
+      }
+      table.products_table thead th {
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+        color: #FFFFFF;
+        border-left: 2px solid #D0E4F5;
+      }
+      table.products_table thead th:first-child {
+        border-left: none;
+        width:20%
+      }
+      
+.product-wrap-top {display: flex; flex-direction: column; }
+.prod-top {flex: 1; display: flex; flex-direction: row; justify-content: flex-start; align-content: center; align-items: center}
+.product-wrap-bottom {display: flex; flex-direction: row}
+.prod-bottom {flex: 1}
+      .product-image {width: 30%; margin-right: 5%; }
+
+
+      .account-wrap {display: flex}
+
+.acc-right {flex: 1 0 70%; display: flex; flex-direction: column; align-content: flex-start; margin-left: 5% }
+
+.acc-img {background-color: #c1c1c1; border-radius: 50%; padding: 5% }
+.acc-img img {padding-left:5%}
+
+@media (max-width: 768px) {
+
+  .prod-top { flex-direction: column; }
+  .prod-top img {margin-bottom: 5% }
+  nav{margin-bottom: 7%}
+}

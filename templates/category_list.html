@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Category List</h1>
+
+{% if user.is_authenticated %}
+
+<div class="mb-4" id="btn-align">
+    <a href="{% url 'category-create' %}" class="btn btn-primary" role="button">Add</a>
+      </div>
+        {% endif %}
+
+
+      
+<div class="grow">
+  {% if category_list %}
+
+  <table class="products_table">
+    <thead>
+      <tr>
+
+        <th>Categories</th>
+
+
+
+        {% if user.is_authenticated %}
+        <th>Update</th>
+        <th>Delete</th>
+        {% endif %}
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr> {% for category in category_list %}
+        <td> <a class="shadow" href="{{ category.pk }}">{{ category.c_name }}</a></td>
+        {% if user.is_authenticated %}
+
+          
+        <td> <a href="{% url 'category-update' category.pk %}" class="btn btn-primary" role="button">Update</a></td>
+        <td> <a href="{% url 'category-delete' category.pk %}" class="btn btn-danger" role="button">Delete</a></td>
+        {% endif %}
+
+   
+
+      </tr> {% endfor %}
+    </tbody>
+
+  </table>
+  {% else %}
+  <p>There are no Categories Available.</p> <br> {% endif %}
+<br>
+</div>
+
+
+
+
+
+{% load static %} {% load widget_tweaks %} {% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}"> {% endblock %} {% block javascript %}
+<script src="{% static 'js/simplemde.min.js' %}"></script>
+<script>
+  var simplemde = new SimpleMDE();
+
+</script>
+{% endblock %} {% endblock %}

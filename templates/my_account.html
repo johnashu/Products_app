@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>    
+<h3>My Account</h3>
+<br>
+<div class="account-wrap">
+
+        {% load static %}
+
+<div class="acc-left">
+        <div class="acc-img">
+        <img src="{% static 'img/user.svg' %}" alt="">
+</div>
+</div>
+
+<div class="acc-right">
+
+        <form method="post" novalidate>
+                {% csrf_token %}
+                {% include 'includes/form.html' %}
+                <button class="btn-success btn" type="submit">Save Changes</button>
+            </form>
+
+        <br>
+        <a  href="{% url 'password_change' %}">Change password</a>
+        <br>
+        <a href="{% url 'logout' %}">Log out</a>
+        <br>  
+    </div>
+
+</div>
+<br>
+{% endblock content %}
+

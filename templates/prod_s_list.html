@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<br>
+<select>
+    
+        <option value="categories">  <a href="{{ 'search' }}"> Categories</a></option>
+        <option value="products"> <a href="{{ 'search1' }}"> Products</a></option>
+      
+      </select>
+<br><br>
+<form method="get">
+  {{ filter1.form.as_p }}
+  <button type="submit">Search</button>
+</form>
+<ul>
+{% for prod in filter1.qs %}
+  <li><a href="{% url 'product-detail' prod.pk %}">{{ prod.p_name }} - {{ prod.get_p_name }}</a></li>
+{% endfor %}
+</ul>
+<br>
+  
+{% endblock %}

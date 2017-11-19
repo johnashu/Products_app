@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Title: {{ product.p_name }}</h1>
+    
+<div class="product-wrap-top">
+
+<div class="prod-top">
+
+  
+    <img class="product-image" src="{{ product.featured_image }}" alt="{{ product.p_name }}">
+    
+     
+ <p><strong>Description:</strong> {{ product.description }}</p>
+</div>
+</div>
+<div class="product-wrap-top">
+<div class="prod-bottom">
+<p><strong>Category:</strong> <a href="{% url 'category-detail' product.category.pk %}">{{ product.category }}</a></p>
+      <p><strong>Price:</strong> €{{ product.price }}</p> 
+      <p><strong>Quantity Available:</strong> {{ product.quantity }}</p>  
+      
+      <br>
+    </div>
+  </div>
+
+
+
+      {% if user.is_authenticated %}
+      
+      <div class="mb-4" id="btn-align">
+          <a href="{% url 'product-update' product.pk %}" class="btn btn-primary" role="button">Update</a>
+     
+          <a href="{% url 'product-delete' product.pk %}" class="btn btn-danger" role="button">Delete</a>
+          <br>   <br>
+        </div>
+              {% endif %}
+      
+{% endblock %}

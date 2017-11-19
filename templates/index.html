@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Store Home</h1>
+   
+      <p>Welcome to <em>The Store</em>, A Django App by John Ashurst </p>
+    
+    <h2>Store Content</h2>
+    
+      <p>This Store has the following :</p>
+      <ul>
+        <li><strong><a href="{% url 'categories' %}" >Categories: </a></strong> <b>{{ num_cat }}</b></li>
+        <li><strong><a href="{% url 'products' %}">Products: </a></strong> <b>{{ num_products }}</b></li>
+      </ul>
+      <br>
+      <p>You have visited this page <b>{{ num_visits }}</b> {% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+
+      <br>
+{% endblock %}

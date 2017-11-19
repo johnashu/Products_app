@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Products</h1>
+
+    {% if user.is_authenticated %}
+    
+    <div class="mb-4" id="btn-align">
+        <a href="{% url 'product-create' %}" class="btn btn-primary" role="button">Add</a>
+          </div>
+            {% endif %}
+    
+    {% if product_list %}
+       
+        <table class="products_table">
+            <thead>
+            <tr>
+            <th></th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            {% if user.is_authenticated %}
+            <th>Update</th>
+            <th>Delete</th>
+            {% endif %}
+            </tr>
+            </thead>
+            <tbody>
+
+                <tr> {% for product in product_list %}    
+                    <td class="display_list_li"><a href="{{ product.pk }}"><img src="{{ product.featured_image }}" alt=""></a></td>
+                    <td><a href="{{ product.pk }}">{{ product.p_name }}</a></td>
+                    <td><a href="{% url 'category-detail' product.category.pk %}">({{product.category}})</a></td>
+                    <td><p>€{{ product.price }}</p></td>
+                    <td> <p>{{ product.quantity }}</p></td>
+                            {% if user.is_authenticated %}             
+                              
+                            <td> <a href="{% url 'product-update' product.pk %}" class="btn btn-primary" role="button">Update</a></td>
+                            <td> <a href="{% url 'product-delete' product.pk %}" class="btn btn-danger" role="button">Delete</a></td>
+                            {% endif %}
+              
+                    
+                  
+                  </tr>      {% endfor %}
+            </tbody>
+ 
+            </table>
+
+    
+         <br>
+
+
+         
+        {% else %}
+          <p>There are no Products Available.</p>           <br>
+        {% endif %}     
+
+{% endblock %}
