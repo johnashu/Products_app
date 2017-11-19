@@ -1,0 +1,20 @@
+
+
+# Elastic Beanstalk Files
+
+.elasticbeanstalk/*
+
+!.elasticbeanstalk/*.cfg.yml
+
+!.elasticbeanstalk/*.global.yml
+
+
+.ebextensions/django.config
+.elasticbeanstalk/config.yml
+.elasticbeanstalk/config.yml
+*.pyc
+.elasticbeanstalk/config.yml
+*.zip
+*.whl
+
+
