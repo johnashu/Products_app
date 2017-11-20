@@ -48,7 +48,7 @@ nav {
     table.products_table {
         border: 1px solid #1C6EA4;
         background-color: #EEEEEE;
-        width: 100%;
+        max-width: 100%;
         text-align: center;
         border-collapse: collapse;
       }
@@ -100,4 +100,27 @@ nav {
   .prod-top { flex-direction: column; }
   .prod-top img {margin-bottom: 5% }
   nav{margin-bottom: 7%}
+ 
+}
+
+@media (max-width: 640px) {
+
+
+  table.products_table td:nth-child(7) {display: none}
+  table.products_table td:nth-child(6) {display: none}
+  table.products_table td:nth-child(5) {display: none}
+  table.products_table th:nth-child(7) {display: none}
+  table.products_table th:nth-child(6) {display: none}
+  table.products_table th:nth-child(5) {display: none}
+}
+
+@media (max-width: 400px) {
+  table.products_table thead th:first-child {display: none}
+  table.products_table td:first-child {display: none}
+  table.products_table td:nth-child(7) {display: none}
+  table.products_table td:nth-child(6) {display: none}
+  table.products_table td:nth-child(5) {display: none}
+  table.products_table th:nth-child(7) {display: none}
+  table.products_table th:nth-child(6) {display: none}
+  table.products_table th:nth-child(5) {display: none}
 }

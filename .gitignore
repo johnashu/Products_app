@@ -24,3 +24,5 @@ secretkeyfile.py
 *.pyc
 *.pyc
 *.config
+*.pyc
+*.pyc
