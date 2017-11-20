@@ -123,4 +123,7 @@ nav {
   table.products_table th:nth-child(7) {display: none}
   table.products_table th:nth-child(6) {display: none}
   table.products_table th:nth-child(5) {display: none}
+  
+.pagination {font-size: 10px}
 }
+
