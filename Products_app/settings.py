@@ -22,6 +22,7 @@ LOGOUT_REDIRECT_URL = 'index'
 
 INSTALLED_APPS = [
     'products',
+    'categories',
     'accounts',
 
     'widget_tweaks',

@@ -1,8 +1,8 @@
-from .models import Category
+from .models import Product
 import django_filters
 
-class CategoryFilter(django_filters.FilterSet):
-    class Meta:
-        model = Category
-        fields = ['c_name', ]
+# class CategoryFilter(django_filters.FilterSet):
+#     class Meta:
+#         model = Category
+#         fields = ['c_name', ]
 
